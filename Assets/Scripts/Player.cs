@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     private Rigidbody _rigidbody;
     private int ScoreValue = 0;
     [SerializeField] private TMP_Text _scoreText;
-
+    [SerializeField] private ScenarioData _scenario;
+    [SerializeField] private GameObject _wallPrefab;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _scoreText.text = "Score : " + ScoreValue;
+        _scoreText.text = "Score : "+ScoreValue;
     }
 
     void Update()
@@ -39,4 +41,18 @@ public class Player : MonoBehaviour
         }
     }
 
+<<<<<<< Updated upstream
+=======
+    private void UpdateScore()
+    {
+        ScoreValue++;
+        PlayerPrefs.SetString("Score", "Score : " + ScoreValue.ToString());
+        _scoreText.text = PlayerPrefs.GetString("Score");
+        Instantiate(_wallPrefab, _scenario.FirstWalls[0], Quaternion.identity);
+        if(ScoreValue == 8)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+>>>>>>> Stashed changes
 }
