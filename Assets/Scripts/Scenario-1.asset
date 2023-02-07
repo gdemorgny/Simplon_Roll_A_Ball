@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Scenario-1
   m_EditorClassIdentifier: 
   FirstWalls:
-  - {x: -3, y: 1, z: 3.8}
+  - position: {x: 0, y: 0, z: 0}
+    orientation: {x: 0, y: 0, z: 0}
