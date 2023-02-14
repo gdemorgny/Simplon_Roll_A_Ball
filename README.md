@@ -24,3 +24,4 @@ Demande :
 
 - PlayersPrefs : https://docs.unity3d.com/ScriptReference/PlayerPrefs.html
 - ScriptableObjects : https://docs.unity3d.com/Manual/class-ScriptableObject.html
+- Changement de scène : https://learn.unity.com/tutorial/create-a-scene-flow?pathwayId=5f7e17e1edbc2a5ec21a20af&missionId=5f751af7edbc2a0022cdbbb6#
